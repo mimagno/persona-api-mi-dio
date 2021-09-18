@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.util.Lazy;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -27,7 +28,7 @@ public class Person {
     private String lastName;
 
     @Column(nullable = false)
-    private String birthDate;
+    private LocalDate birthDate;
 
     @Column(nullable = false, unique = true)
     private String cpf;
