@@ -1,8 +1,8 @@
 package one.digitalinnovation.mi.personapi.controller;
 
+import lombok.AllArgsConstructor;
 import one.digitalinnovation.mi.personapi.dto.MessageResponseDTO;
 import one.digitalinnovation.mi.personapi.dto.request.PersonDTO;
-import one.digitalinnovation.mi.personapi.entity.Person;
 import one.digitalinnovation.mi.personapi.exception.PersonNotFoundException;
 import one.digitalinnovation.mi.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +15,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/miv1/people")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonaController {
 
     private PersonService personService;
-
-    @Autowired
-    public PersonaController(PersonService personService) {
-        this.personService = personService;
-    }
 
     @GetMapping
     public String getTest() {

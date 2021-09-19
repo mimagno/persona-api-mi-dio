@@ -1,5 +1,6 @@
 package one.digitalinnovation.mi.personapi.service;
 
+import lombok.AllArgsConstructor;
 import one.digitalinnovation.mi.personapi.exception.PersonNotFoundException;
 import one.digitalinnovation.mi.personapi.repository.PersonRepository;
 import one.digitalinnovation.mi.personapi.dto.MessageResponseDTO;
@@ -12,16 +13,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
 
     private PersonRepository personRepository;
 
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
-
-    @Autowired
-    public PersonService(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
 
     public MessageResponseDTO createPerson(PersonDTO personDTO) {
         Person personToSave = personMapper.toModel(personDTO);
