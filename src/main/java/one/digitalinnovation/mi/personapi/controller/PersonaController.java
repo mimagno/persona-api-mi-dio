@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/miv1/people")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
+@CrossOrigin
 public class PersonaController {
 
     private PersonService personService;
