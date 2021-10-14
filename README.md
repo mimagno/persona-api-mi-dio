@@ -1,4 +1,4 @@
-<h2>[Projeto Desenvolvido por MiMagno no Bootcamp da Capgemni na DIO]</h2>
+<h2>[Projeto Desenvolvido por MiMagno no Bootcamp da Capgemini na DIO]</h2>
 
 <h5>Este é um pequeno sistema para o gerenciamento de pessoas de uma empresa através de uma API REST, criada com o Spring Boot.
 </h5>
